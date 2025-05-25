@@ -1,3 +1,8 @@
+Youtube: https://youtu.be/Z8FBStdpLX4 
+Github: https://github.com/negreamaria21/P-proiect_cloud_compeuting.git 
+Aplicație: https://p-proiect-cloud-computing.vercel.app/
+
+
 1.	Introducere
 My BookShelf este o aplicație web intuitivă care le permite utilizatorilor să își creeze o bibliotecă virtuală personalizată. Proiectul permite adăugarea, editarea și ștergerea cărților, cu detalii precum titlu, autor, gen, data citirii, rating și comentariu personal. Scopul aplicației este de a ajuta utilizatorii să-și organizeze lecturile și să revină oricând asupra lor.
 
