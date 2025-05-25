@@ -1,14 +1,14 @@
 import { useState } from "react";
 import axios from "axios";
 
-export default function BookForm({ onSubmit }) {
-  const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
-  const [genre, setGenre] = useState("");
-  const [readDate, setReadDate] = useState("");
-  const [rating, setRating] = useState(3);
-  const [comment, setComment] = useState("");
-  const [cover, setCover] = useState("");
+export default function BookForm({ onSubmit, entry = {}  }) {
+  const [title, setTitle] = useState(entry?.title || '');
+  const [author, setAuthor] = useState(entry?.author || '');
+  const [genre, setGenre] = useState(entry?.genre || '');
+  const [readDate, setReadDate] = useState(entry?.readDate || '');
+  const [rating, setRating] = useState(entry?.rating || 3);
+  const [comment, setComment] = useState(entry?.comment || '');
+  const [cover, setCover] = useState(entry?.cover || '');
 
   const fetchBookDetails = async (bookTitle) => {
     try {
@@ -65,7 +65,7 @@ export default function BookForm({ onSubmit }) {
         className="p-2 rounded border border-pink-300"
       />
 
-      <label className="text-pink-900 font-semibold">Dată citire</label>
+      <label className="text-pink-900 font-semibold">Data citire</label>
       <input
         type="date"
         value={readDate}
@@ -92,7 +92,7 @@ export default function BookForm({ onSubmit }) {
 
       {cover && (
         <div className="flex justify-center">
-          <img src={cover} alt="Copertă" className="h-40 rounded mt-4 shadow-md" />
+          <img src={cover} alt="Coperta" className="h-40 rounded mt-4 shadow-md" />
         </div>
       )}
 
@@ -100,7 +100,7 @@ export default function BookForm({ onSubmit }) {
         type="submit"
         className="bg-pink-500 text-white py-2 rounded hover:bg-pink-600"
       >
-        Salvează cartea
+        Salveaza cartea
       </button>
     </form>
   );
